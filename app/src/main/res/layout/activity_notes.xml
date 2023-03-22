@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controllers.NotesController"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/courseLabel"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/notes"
+        android:textColor="@color/white"
+        android:background="@color/dark_cyan"
+        android:textSize="36sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/noteName"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/dark_cyan"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseLabel" />
+
+    <EditText
+        android:id="@+id/noteBody"
+        android:layout_width="0dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:hint="@string/note_body"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@color/dark_cyan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteName" />
+
+    <ImageButton
+        android:id="@+id/newBTN"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/amber"
+        android:contentDescription="@string/new_note"
+        android:onClick="newNote"
+        app:layout_constraintEnd_toStartOf="@+id/emailBTN"
+        app:layout_constraintTop_toBottomOf="@+id/noteBody"
+        app:srcCompat="@drawable/ic_add"
+        app:tint="@color/black" />
+
+    <ImageButton
+        android:id="@+id/deleteBTN"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/amber"
+        android:contentDescription="@string/delete"
+        android:onClick="deleteNote"
+        app:layout_constraintEnd_toStartOf="@+id/saveBTN"
+        app:layout_constraintTop_toBottomOf="@+id/noteBody"
+        app:srcCompat="@drawable/ic_delete"
+        app:tint="@color/black" />
+
+    <ImageButton
+        android:id="@+id/smsBTN"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/amber"
+        android:contentDescription="@string/send_sms"
+        android:onClick="sendSMS"
+        app:layout_constraintEnd_toStartOf="@+id/deleteBTN"
+        app:layout_constraintTop_toBottomOf="@+id/noteBody"
+        app:srcCompat="@drawable/ic_sms"
+        app:tint="@color/black" />
+
+    <ImageButton
+        android:id="@+id/emailBTN"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/amber"
+        android:contentDescription="@string/send_email"
+        android:onClick="sendEmail"
+        app:layout_constraintEnd_toStartOf="@+id/smsBTN"
+        app:layout_constraintTop_toBottomOf="@+id/noteBody"
+        app:srcCompat="@drawable/ic_email"
+        app:tint="@color/black" />
+
+    <ImageButton
+        android:id="@+id/saveBTN"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/amber"
+        android:contentDescription="@string/save"
+        android:onClick="saveNote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteBody"
+        app:srcCompat="@drawable/ic_save"
+        app:tint="@color/black" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteBTN" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

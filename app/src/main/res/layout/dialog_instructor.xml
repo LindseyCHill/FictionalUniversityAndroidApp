@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <EditText
+        android:id="@+id/instructorNameLabel"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/dark_cyan"
+        android:hint="@string/instructor_name"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/instructorPhoneLabel"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/dark_cyan"
+        android:hint="@string/phone"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructorNameLabel"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/instructorEmailLabel"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/dark_cyan"
+        android:hint="@string/email"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructorPhoneLabel"
+        android:importantForAutofill="no" />
+
+    <ImageButton
+        android:id="@+id/saveInstructorBTN"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/amber"
+        android:contentDescription="@string/save"
+        android:onClick="saveInstructor"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructorEmailLabel" />
+
+    <ImageButton
+        android:id="@+id/deleteInstructorBTN"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/amber"
+        android:contentDescription="@string/save"
+        android:onClick="deleteInstructor"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintEnd_toStartOf="@+id/saveInstructorBTN"
+        app:layout_constraintTop_toBottomOf="@+id/instructorEmailLabel" />
+
+    <ImageButton
+        android:id="@+id/addInstructorBTN"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/amber"
+        android:contentDescription="@string/save"
+        android:onClick="addInstructor"
+        android:src="@drawable/ic_add"
+        app:layout_constraintEnd_toStartOf="@+id/deleteInstructorBTN"
+        app:layout_constraintTop_toBottomOf="@+id/instructorEmailLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
