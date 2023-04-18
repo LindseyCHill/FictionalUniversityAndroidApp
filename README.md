@@ -14,6 +14,7 @@ Installation
 5.     Follow any prompts from Android studio to complete the installation process
 
 Run the Application on Emulator
-1.     Utilizing the Android Studio device manager, start up an emulator that is running any API version 26 or above. If an appropriate emulator does not exist, one will need to be created.
+1.     Utilizing the Android Studio device manager, start up an emulator that is running any API version 26 or above. 
+        If an appropriate emulator does not exist, one will need to be created.
 2.     Start the application on the emulator.
 3.     Enter “test” for the username and password. Both the username and password are case sensitive.
